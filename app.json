@@ -1,0 +1,8 @@
+{
+  "name": "Simple REST API in Play",
+  "description": "An activator template for implementing Json based REST API.",
+  "repository": "https://github.com/amitdev/simple-rest-scala",
+  "addons": [],
+  "success_url": "/books",
+  "keywords": ["play", "scala"]
+}
