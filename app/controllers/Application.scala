@@ -14,6 +14,9 @@ class Application extends Controller {
     val b = request.body.validate[Book]
     b.fold(
       errors => {
+        // There's a warning here, but it's not clear if toFlatJson
+        // should really have been deprecated
+        // https://github.com/playframework/playframework/issues/5531
         BadRequest(Json.obj("status" -> "OK", "message" -> JsError.toFlatJson(errors)))
       },
       book => {
